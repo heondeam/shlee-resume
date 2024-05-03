@@ -4,9 +4,10 @@ import P1 from '@components/typography/p1'
 import { cn } from '@utils/utils'
 import { VariantProps, cva } from 'class-variance-authority'
 
-const unorderedListVariants = cva('grid text-slate', {
+const unorderedListVariants = cva('grid text-slate gap-2', {
   variants: {
     cols: {
+      1: 'grid-cols-1',
       2: 'grid-cols-2',
       3: 'grid-cols-3',
       4: 'grid-cols-4'
