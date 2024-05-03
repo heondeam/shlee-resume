@@ -1,11 +1,9 @@
-import { cn } from "@utils/common";
+import { cn } from "@/utils/utils";
 import { cva } from "class-variance-authority";
 
 type H5Props = React.HTMLAttributes<HTMLHeadingElement>;
 
-const h5Variants = cva(
-  "whitespace-pre-line text-lg font-semibold leading-[1.4]"
-);
+const h5Variants = cva("whitespace-pre-line text-lg leading-[1.4]");
 
 const H5 = (props: H5Props) => {
   const { className, ...rest } = props;
