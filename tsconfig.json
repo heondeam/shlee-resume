@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "ES5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,8 +19,16 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@png": ["./assets/png/*"],
+      "@svg": ["./assets/svg/*"],
+      "@gif": ["./assets/gif/*"],
+      "@jpg": ["./assets/jpg/*"],
+      "@utils": ["./utils/*"],
+      "@components": ["./components/*"],
+      "@hooks": ["./hooks/*"],
+      "@/*": ["./*"],
+    },
+    "forceConsistentCasingInFileNames": true,
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
