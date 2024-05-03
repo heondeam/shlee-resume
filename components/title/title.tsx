@@ -10,9 +10,11 @@ type TitleProps = {
 
 export default function Title({ title, idx }: TitleProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="w-full flex items-center gap-3">
       <Neon>{idx}.</Neon>
-      <H2 className="text-white">{title}</H2>
+      <H2 className="text-white whitespace-nowrap">{title}</H2>
+      {/* line */}
+      <div className="w-[200px] h-[1px] bg-lightestNavy md:w-[300px]"></div>
     </div>
   );
 }
