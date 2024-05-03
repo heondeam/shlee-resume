@@ -83,6 +83,8 @@
       --border: 0 0% 14.9%;
       --input: 0 0% 14.9%;
       --ring: 0 0% 83.1%;
+
+      --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
     }
   }
 
@@ -92,5 +94,22 @@
     }
     body {
       @apply bg-background text-foreground;
+    }
+  }
+
+  @layer components {
+    .image-wrapper {
+      @apply absolute z-50 w-full h-full left-0 top-0 group-hover:left-[-0.25rem] group-hover:top-[-0.25rem] transition-custom group-hover:transition-custom;
+    }
+
+    .image-before {
+      @apply relative min-w-[20rem] h-[20rem]
+      before:absolute before:top-3 before:left-3 before:w-[20rem] before:h-[20rem]
+      before:rounded-md before:bg-darkNavy before:border before:border-green before:z-0
+      hover:before:left-4 hover:before:top-4 transition-custom hover:before:transition-custom; 
+    }
+
+    .profile {
+      @apply rounded-md filter grayscale-[100%] hover:grayscale-[0%] transition-custom;
     }
   }
