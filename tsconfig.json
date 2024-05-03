@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,18 +18,25 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@png": ["./assets/png/*"],
-      "@svg": ["./assets/svg/*"],
-      "@gif": ["./assets/gif/*"],
-      "@jpg": ["./assets/jpg/*"],
-      "@utils": ["./utils/*"],
-      "@components": ["./components/*"],
-      "@hooks": ["./hooks/*"],
-      "@/*": ["./*"],
+      "@jpg/*": ["./assets/jpg/*"],
+      "@png/*": ["./assets/png/*"],
+      "@gif/*": ["./assets/gif/*"],
+      "@svg/*": ["./assets/svg/*"],
+      "@toast": ["./utils/toast"],
+      "@lib/*": ["./libs/*"],
+      "@utils/*": ["./utils/*"],
+      "@components/*": ["./components/*"],
+      "@/*": ["./*"]
     },
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
