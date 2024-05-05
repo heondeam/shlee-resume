@@ -28,6 +28,7 @@
       "@lib/*": ["./libs/*"],
       "@utils/*": ["./utils/*"],
       "@components/*": ["./components/*"],
+      "@config": ["utils/config.ts"],
       "@/*": ["./*"]
     },
     "forceConsistentCasingInFileNames": true
