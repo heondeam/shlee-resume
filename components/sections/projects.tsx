@@ -9,7 +9,7 @@ import Card from '@components/ui/project-card'
 
 import ddockddock from '@png/ddockddock.png'
 
-export default function Project() {
+export default function Projects() {
   return (
     <Section className="h-auto py-48 bg-navy px-4">
       <div className="max-w-[950px] flex flex-col gap-6">

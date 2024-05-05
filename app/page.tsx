@@ -1,7 +1,7 @@
 import AboutMe from '@components/sections/about-me'
 import Experience from '@components/sections/experience'
 import Hello from '@components/sections/hello'
-import Project from '@components/sections/project'
+import Projects from '@components/sections/projects'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Hello />
       <AboutMe />
       <Experience />
-      <Project />
+      <Projects />
     </main>
   )
 }
