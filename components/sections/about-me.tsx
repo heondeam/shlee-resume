@@ -27,7 +27,7 @@ const SKILLS = [
 
 export default function AboutMe() {
   return (
-    <Section className="h-screen bg-navy px-20">
+    <Section id="about" className="h-screen bg-navy px-20">
       <div className="max-w-[850px] flex flex-col gap-6">
         <Title title="About Me" idx="01" />
         <div className="flex justify-between gap-8">

@@ -5,13 +5,13 @@ import Section from '@components/ui/section'
 import Link from 'next/link'
 import Github from '@svg/github.svg'
 
-import Card from '@components/ui/project-card'
+import Card from '@components/project/project-card'
 
 import ddockddock from '@png/ddockddock.png'
 
 export default function Projects() {
   return (
-    <Section className="h-auto py-48 bg-navy px-20">
+    <Section id="projects" className="h-auto py-48 bg-navy px-20">
       <div className="max-w-[950px] flex flex-col gap-6">
         <Title idx="03" title="Project" />
 

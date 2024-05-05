@@ -9,7 +9,7 @@ import UnorderList from '@components/ui/unorder-list'
 
 export default function Experience() {
   return (
-    <Section className="h-[550px] bg-navy px-20">
+    <Section id="experience" className="h-[550px] bg-navy px-20">
       <div className="max-w-[850px] flex flex-col gap-6">
         <Title title="Work Experience" idx="02" />
         <Tabs className="flex gap-6" defaultValue="team-sparta">
