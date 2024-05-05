@@ -1,7 +1,7 @@
 'use client'
 
-import UnorderList from '@components/list/unorder-list'
-import Title from '@components/title/title'
+import UnorderList from '@components/ui/unorder-list'
+import Title from '@components/ui/title'
 import P1 from '@components/typography/p1'
 import Section from '@components/ui/section'
 import Image from 'next/image'
@@ -27,7 +27,7 @@ const SKILLS = [
 
 export default function AboutMe() {
   return (
-    <Section className="h-[950px] bg-navy px-20">
+    <Section className="h-screen bg-navy px-20">
       <div className="max-w-[850px] flex flex-col gap-6">
         <Title title="About Me" idx="01" />
         <div className="flex justify-between gap-8">
