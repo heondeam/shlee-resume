@@ -20,13 +20,13 @@ type CardProps = {
 export default function Card({ belong, title, description, stack, link, image }: CardProps) {
   return (
     <div className="relative grid grid-cols-12 gap-[10px] items-center">
-      <div className="row-start-1 col-start-7 col-end-[-1] flex flex-col gap-4 items-end relative z-20">
+      <div className="row-start-1 col-start-7 col-end-[-1] flex flex-col gap-6 items-end relative z-20">
         {/* content */}
         <div className="flex flex-col gap-2 items-end">
           <H5 className="text-green">팀 스파르타</H5>
           <H2 className="text-white">똑똑 365</H2>
         </div>
-        <div className="shadow-custom transition-custom p-[25px] rounded-md text-lightSlate bg-lightNavy">
+        <div className="shadow-custom transition-custom p-[25px] rounded-md text-lightSlate bg-lightNavy flex flex-col items-end text-right gap-4">
           {/* feature card */}
           {description.map((desc, idx) => (
             <P1 key={idx}>{desc}</P1>
