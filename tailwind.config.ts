@@ -87,6 +87,9 @@ const config = {
       },
       transitionProperty: {
         custom: 'var(--transition)'
+      },
+      boxShadow: {
+        custom: 'var(--shadow)'
       }
     }
   },
