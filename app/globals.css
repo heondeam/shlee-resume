@@ -52,6 +52,8 @@
       
       --blue: #57cbff;
 
+      --navbar-navy: rgba(10, 25, 47, 0.85);
+
       --shadow-custom: 0 10px 30px -15px var(--navy-shadow)
 
       --radius: 0.5rem;
@@ -94,6 +96,9 @@
   @layer base {
     * {
       @apply border-border;
+    }
+    html {
+      @apply scroll-smooth;
     }
     body {
       @apply bg-background text-foreground;
