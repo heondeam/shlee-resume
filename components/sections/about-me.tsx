@@ -43,7 +43,12 @@ export default function AboutMe() {
           </div>
           <div className="image-before group">
             <div className="image-wrapper">
-              <Image src={Profile} alt="Picture of the author" layout="fill" className="profile" />
+              <Image
+                src={Profile}
+                alt="Picture of the author"
+                layout="responsive"
+                className="profile"
+              />
             </div>
           </div>
         </div>
