@@ -52,7 +52,7 @@
       
       --blue: #57cbff;
 
-      --shadow: 0 10px 30px -15px var(--navy-shadow)
+      --shadow-custom: 0 10px 30px -15px var(--navy-shadow)
 
       --radius: 0.5rem;
     }
@@ -102,9 +102,9 @@
 
   @layer components {
     .image-before {
-      @apply relative min-w-[20rem] h-[20rem]
+      @apply relative w-[20rem] h-[20rem]
       before:absolute before:top-3 before:left-3 before:w-[20rem] before:h-[20rem]
-      before:rounded-md before:bg-darkNavy before:border before:border-green before:z-0
+      before:rounded-[4px] before:bg-darkNavy before:border before:border-green before:z-0
       hover:before:left-4 hover:before:top-4 transition-custom hover:before:transition-custom; 
     }
 
@@ -113,6 +113,6 @@
     }
 
     .profile {
-      @apply rounded-md filter grayscale-[100%] group-hover:grayscale-[0%] transition-custom;
+      @apply rounded-[4px] filter grayscale-[100%] group-hover:grayscale-[0%] transition-custom;
     }
   }

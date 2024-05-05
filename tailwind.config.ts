@@ -89,7 +89,7 @@ const config = {
         custom: 'var(--transition)'
       },
       boxShadow: {
-        custom: 'var(--shadow)'
+        custom: '0 10px 30px -15px rgba(2, 12, 27, 0.7)'
       }
     }
   },
