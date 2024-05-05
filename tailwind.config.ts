@@ -27,6 +27,7 @@ const config = {
         slate: 'var(--slate)',
         lightSlate: 'var(--light-slate)',
         lightestSlate: 'var(--lightest-slate)',
+        navbar: 'var(--navbar-navy)',
         white: 'var(--white)',
         green: 'var(--green)',
         greenTint: 'var(--green-tint)',
