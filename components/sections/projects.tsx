@@ -11,7 +11,7 @@ import ddockddock from '@png/ddockddock.png'
 
 export default function Projects() {
   return (
-    <Section className="h-auto py-48 bg-navy px-4">
+    <Section className="h-auto py-48 bg-navy px-20">
       <div className="max-w-[950px] flex flex-col gap-6">
         <Title idx="03" title="Project" />
 
