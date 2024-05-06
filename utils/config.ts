@@ -20,5 +20,19 @@ export const config = {
       name: 'Education',
       link: '#education'
     }
-  ]
+  ],
+  sidebarLinks: {
+    left: [
+      {
+        type: 'link',
+        icon: 'github'
+      }
+    ],
+    right: [
+      {
+        type: 'text',
+        text: 'seoungheonle@gmail.com'
+      }
+    ]
+  }
 }
