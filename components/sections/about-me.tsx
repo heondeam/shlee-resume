@@ -27,11 +27,11 @@ const SKILLS = [
 
 export default function AboutMe() {
   return (
-    <Section id="about" className="h-screen bg-navy px-20">
-      <div className="max-w-[850px] flex flex-col gap-6">
+    <Section id="about" className="bg-navy px-20 py-48">
+      <div className="max-w-[900px] flex flex-col gap-6">
         <Title title="About Me" idx="01" />
-        <div className="flex justify-between gap-8">
-          <div className="flex flex-col gap-4 w-1/2">
+        <div className="flex flex-col gap-8 md:flex-row justify-between">
+          <div className="flex flex-col gap-4 md:w-[calc(100%-350px)]">
             {/* texts */}
             {TEXTS.map((text, idx) => (
               <P1 key={idx} className="text-slate">
@@ -41,14 +41,15 @@ export default function AboutMe() {
 
             <UnorderList items={SKILLS} cols={2} bulletSize="sm" />
           </div>
-          <div className="image-before group">
-            <div className="image-wrapper">
+          <div className="flex justify-center px-4">
+            <div className="group relative min-w-[280px] max-w-[300px] h-fit">
               <Image
                 src={Profile}
                 alt="Picture of the author"
                 layout="responsive"
                 className="profile"
               />
+              <div className="absolute w-full h-full bg-black left-3 top-3 border border-green rounded-[4px] z-0 group-hover:left-4 group-hover:top-4 group-hover:transition-custom"></div>
             </div>
           </div>
         </div>
