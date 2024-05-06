@@ -87,18 +87,38 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out'
       },
       transitionProperty: {
-        custom: 'var(--transition)'
+        custom: 'var(--transition)',
+        before: 'var(--transition-before)',
+        beforeActive: 'var(--transition-before-active)',
+        after: 'var(--transition-after)',
+        afterActive: 'var(--transition-after-active)'
       },
       boxShadow: {
         custom: '0 10px 30px -15px rgba(2, 12, 27, 0.7)'
       },
       fontFamily: {
-        main: ['Calibre'],
-        custom: ['SF Mono']
+        sans: 'var(--font-sans)',
+        mono: 'var(--font-mono)'
       },
       fontSize: {
         heading: 'clamp(40px, 8vw, 70px)',
         'small-heading': 'clamp(14px, 5vw, 16px)'
+      },
+      rotate: {
+        '225': '225deg',
+        '-90': '-90deg',
+        '-225': '-225deg'
+      },
+      transitionDuration: {
+        custom: '0.22s',
+        '15': '0.15s'
+      },
+      transitionDelay: {
+        custom: '0.12s'
+      },
+      transitionTimingFunction: {
+        open: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+        close: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)'
       }
     }
   },
