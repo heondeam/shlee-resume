@@ -10,12 +10,17 @@ type ImageCardProps = {
 
 export default function ImageCard({ image, className }: ImageCardProps) {
   return (
-    <div className={cn('relative w-[600px] h-[300px] bg-green rounded-[4px]', className)}>
+    <div
+      className={cn(
+        'relative min-h-[300px] max-h-[500px] rounded-[4px] flex items-center',
+        className
+      )}
+    >
       <div
         className="absolute z-10 w-full h-full bg-navy filter grayscale brightness-75mix-blend-multiply opacity-50 group-hover:filter-none 
         group-hover:grayscale-0 group-hover:brightness-100 group-hover:blur-0 group-hover:opacity-0 transition-custom"
       ></div>
-      <Image src={image} alt="project image" layout="fill" className="rounded-[4px]" />
+      <Image src={image} alt="project image" layout="responsive" className="rounded-[4px]" />
     </div>
   )
 }
