@@ -6,13 +6,13 @@ import P1 from '../typography/p1'
 import { Button } from '../ui/button'
 import Section from '../ui/section'
 
-export default function Hello() {
+export default function Hero() {
   return (
     <Section className="min-h-screen h-screen bg-navy px-20">
       <div className="max-w-[1000px] flex flex-col gap-6">
         <div>
-          <H5 className="text-small-heading tracking-wider font-mono font-thin">
-            <span className="text-green">Hi, my name is</span>
+          <H5 className="text-small-heading font-sans font-normal tracking-wider">
+            <span className="text-green">안녕하세요, 저는</span>
           </H5>
         </div>
         <div>
