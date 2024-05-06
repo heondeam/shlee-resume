@@ -101,7 +101,7 @@
       @apply scroll-smooth;
     }
     body {
-      @apply bg-background text-foreground;
+      @apply bg-navy;
     }
   }
 
