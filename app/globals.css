@@ -3,6 +3,22 @@
   @tailwind utilities;
 
   @layer base {
+
+    @font-face {
+      font-family: 'Calibre';
+      src: url('/fonts/calibre-regular.woff2') format('woff2'),
+           url('/fonts/calibre-regular.woff') format('woff');
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: 'SF Mono';
+      src: url('/fonts/sf-mono-regular.woff2') format('woff2'),
+           url('/fonts/sf-mono-regular.woff') format('woff');
+      font-weight: 400, 500, 600, 700;
+    }
+
+
     :root {
       --background: 0 0% 100%;
       --foreground: 0 0% 3.9%;
@@ -57,6 +73,10 @@
       --shadow-custom: 0 10px 30px -15px var(--navy-shadow)
 
       --radius: 0.5rem;
+
+      --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
+      sans-serif;
+      --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
     }
 
     .dark {
