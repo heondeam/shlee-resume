@@ -92,6 +92,10 @@ const config = {
       boxShadow: {
         custom: '0 10px 30px -15px rgba(2, 12, 27, 0.7)'
       },
+      fontFamily: {
+        main: ['Calibre'],
+        custom: ['SF Mono']
+      },
       fontSize: {
         heading: 'clamp(40px, 8vw, 70px)',
         'small-heading': 'clamp(14px, 5vw, 16px)'
