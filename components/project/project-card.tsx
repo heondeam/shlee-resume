@@ -7,8 +7,10 @@ import P2 from '@components/typography/p2'
 
 import Image, { StaticImageData } from 'next/image'
 import ImageCard from './image-card'
+import P5 from '@components/typography/p5'
 
 type CardProps = {
+  cnt: number
   belong: string
   title: string
   description: string[]
@@ -17,16 +19,21 @@ type CardProps = {
   image: StaticImageData
 }
 
-export default function Card({ belong, title, description, stack, link, image }: CardProps) {
-  return (
-    <div className="relative grid grid-cols-12 gap-[10px] items-center">
-      <div className="row-start-1 col-start-7 col-end-[-1] flex flex-col gap-6 items-end relative z-20">
-        {/* content */}
-        <div className="flex flex-col gap-2 items-end">
-          <H5 className="text-green">팀 스파르타</H5>
-          <H2 className="text-white">똑똑 365</H2>
-        </div>
-        <div className="shadow-custom transition-custom p-[25px] rounded-md text-lightSlate bg-lightNavy flex flex-col items-end text-right gap-4">
+export default function Card({ cnt, belong, title, description, stack, link, image }: CardProps) {
+  const isRightAligned = cnt % 2 === 0
+
+  const renderContent = (isRightAligned: boolean, description: string[], stack: string[], link) => {
+    const aligned = isRightAligned ? 'lg:items-end' : 'lg:items-start'
+
+    return (
+      <div className={`lg:flex lg:flex-col lg:gap-4 ${aligned}`}>
+        <H5 className="text-green">팀 스파르타</H5>
+        <H2 className="text-white">똑똑 365</H2>
+        <div
+          className={`shadow-custom transition-custom p-[25px] rounded-md text-lightSlate bg-lightNavy flex flex-col items-${
+            isRightAligned ? 'end' : 'start'
+          } gap-4`}
+        >
           {/* feature card */}
           {description.map((desc, idx) => (
             <P1 key={idx}>{desc}</P1>
@@ -35,15 +42,44 @@ export default function Card({ belong, title, description, stack, link, image }:
         <div className="flex relative z-20 gap-4">
           {/* stack */}
           {stack.map((tech, idx) => (
-            <P2 key={idx} className="text-lightSlate whitespace-nowrap">
+            <P5 key={idx} className="text-lightSlate whitespace-nowrap font-mono">
               {tech}
-            </P2>
+            </P5>
           ))}
         </div>
         <div className="flex gap-4">{link}</div>
       </div>
-      <div className="group row-start-1 col-start-1 col-end-8 shadow-custom">
-        <ImageCard image={image} className="w-[600px] h-[300px]" />
+    )
+  }
+
+  const contentCols = (() => {
+    if (isRightAligned) {
+      return 'col-start-1 col-end-[-1] lg:col-start-6 lg:col-end-[-1]'
+    } else {
+      return 'col-start-1 col-end-[-1] lg:col-start-1 lg:col-end-7'
+    }
+  })()
+
+  const imageCols = (() => {
+    if (isRightAligned) {
+      return 'col-start-1 col-end-[-1] lg:col-start-1 lg:col-end-8'
+    } else {
+      return 'col-start-1 col-end-[-1] lg:col-start-6 lg:col-end-[-1]'
+    }
+  })()
+
+  return (
+    <div className="relative flex flex-col items-center lg:grid lg:grid-cols-12 lg:items-center">
+      <div
+        className={`relative z-20 row-start-1 ${contentCols} flex flex-col gap-6 items-${
+          isRightAligned ? 'end' : 'start'
+        }`}
+      >
+        {/* content */}
+        {renderContent(isRightAligned, description, stack, link)}
+      </div>
+      <div className={`group row-start-1 shadow-custom ${imageCols}`}>
+        <ImageCard image={image} />
       </div>
     </div>
   )

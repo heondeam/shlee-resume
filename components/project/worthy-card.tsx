@@ -28,7 +28,7 @@ export default function WorthyCard({ title, description, stack, link }: WorthyCa
         <div>
           <ul className="flex gap-2">
             {stack.map((item, idx) => (
-              <P5 key={idx} className="text-slate">
+              <P5 key={idx} className="text-slate font-mono">
                 {item}
               </P5>
             ))}

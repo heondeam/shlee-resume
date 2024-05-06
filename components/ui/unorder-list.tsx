@@ -1,6 +1,6 @@
 'use client'
 
-import P1 from '@components/typography/p1'
+import P5 from '@components/typography/p5'
 import { cn } from '@utils/utils'
 import { VariantProps, cva } from 'class-variance-authority'
 
@@ -34,15 +34,15 @@ export default function UnorderList({ items, cols, bulletSize, className }: Unor
   return (
     <div className={cn(unorderedListVariants({ cols, className }))}>
       {items.map((item, idx) => (
-        <P1
+        <P5
           className={cn(
             'before:content-["▹"] before:text-green before:inline-block before:mr-2',
             bulletSizeMap[bulletSize]
           )}
           key={idx}
         >
-          {item}
-        </P1>
+          <span className="font-mono">{item}</span>
+        </P5>
       ))}
     </div>
   )

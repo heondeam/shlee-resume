@@ -17,7 +17,7 @@ export default function Navbar() {
         <ul className="flex gap-6">
           {navLinks.map((link, idx) => (
             <Link href={link.link} aria-label={link.link} key={idx}>
-              <li className="group flex gap-2 cursor-pointer">
+              <li className="group flex gap-2 cursor-pointer font-mono">
                 <P5 className="text-green">{`0${idx + 1}.`}</P5>
                 <P5 className="text-slate group-hover:text-green transition-custom">{link.name}</P5>
               </li>
