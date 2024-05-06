@@ -9,11 +9,14 @@ import UnorderList from '@components/ui/unorder-list'
 
 export default function Experience() {
   return (
-    <Section id="experience" className="h-[550px] bg-navy px-20">
-      <div className="max-w-[850px] flex flex-col gap-6">
+    <Section id="experience" className="bg-navy px-20 py-48">
+      <div className="w-full md:max-w-[750px] flex flex-col gap-6 justify-center">
         <Title title="Work Experience" idx="02" />
-        <Tabs className="flex gap-6" defaultValue="team-sparta">
-          <TabsList>
+        <Tabs
+          className="w-full block space-y-6 md:space-y-0 md:flex md:flex-row md:gap-6"
+          defaultValue="team-sparta"
+        >
+          <TabsList className="max-w-[1000px] overflow-auto md:w-[150px]">
             <TabsTrigger value="team-sparta">팀스파르타</TabsTrigger>
             <TabsTrigger value="dsntech">디에스앤텍</TabsTrigger>
             <TabsTrigger value="the-buildsoft">더빌드소프트</TabsTrigger>
