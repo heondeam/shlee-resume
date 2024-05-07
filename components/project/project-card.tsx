@@ -5,7 +5,7 @@ import H5 from '@components/typography/h5'
 import P1 from '@components/typography/p1'
 import P2 from '@components/typography/p2'
 
-import Image, { StaticImageData } from 'next/image'
+import { StaticImageData } from 'next/image'
 import ImageCard from './image-card'
 import P5 from '@components/typography/p5'
 
@@ -27,8 +27,8 @@ export default function Card({ cnt, belong, title, description, stack, link, ima
 
     return (
       <div className={`lg:flex lg:flex-col lg:gap-4 ${aligned}`}>
-        <H5 className="text-green">팀 스파르타</H5>
-        <H2 className="text-white">똑똑 365</H2>
+        <H5 className="text-green">{belong}</H5>
+        <H2 className="text-white">{title}</H2>
         <div
           className={`shadow-custom transition-custom p-[25px] rounded-md text-lightSlate bg-lightNavy flex flex-col items-${
             isRightAligned ? 'end' : 'start'
@@ -56,7 +56,7 @@ export default function Card({ cnt, belong, title, description, stack, link, ima
     if (isRightAligned) {
       return 'col-start-1 col-end-[-1] lg:col-start-6 lg:col-end-[-1]'
     } else {
-      return 'col-start-1 col-end-[-1] lg:col-start-1 lg:col-end-7'
+      return 'col-start-1 col-end-[-1] lg:col-start-1 lg:col-end-8'
     }
   })()
 

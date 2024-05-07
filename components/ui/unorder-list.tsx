@@ -19,7 +19,7 @@ const unorderedListVariants = cva('grid text-slate gap-2', {
 })
 
 export interface UnorderListProps extends VariantProps<typeof unorderedListVariants> {
-  items: string[]
+  items: Array<string | JSX.Element>
   bulletSize: 'sm' | 'md' | 'lg'
   className?: string[]
 }
@@ -36,7 +36,7 @@ export default function UnorderList({ items, cols, bulletSize, className }: Unor
       {items.map((item, idx) => (
         <P5
           className={cn(
-            'before:content-["▹"] before:text-green before:inline-block before:mr-2',
+            'flex items-center tracking-normal before:content-["▹"] before:text-green before:block before:mr-2',
             bulletSizeMap[bulletSize]
           )}
           key={idx}

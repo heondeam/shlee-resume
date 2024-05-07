@@ -35,7 +35,7 @@ export default function Sidebar({ direction }: SidebarProps) {
         style={{
           writingMode: 'vertical-rl'
         }}
-        className="tracking-wider"
+        className="font-mono tracking-wider"
       >
         {text}
       </P5>
