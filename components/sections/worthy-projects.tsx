@@ -16,10 +16,10 @@ export default function WorthyProjects() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 mt-28 gap-[15px]">
           <WorthyCard
-            title="Project Title"
-            description="A brief description of the project goes here."
-            stack={['React', 'TypeScript', 'TailwindCSS']}
-            link="#"
+            title="Dev-Profile"
+            description="채용담당자를 위한 개발자 Github 분석 플랫폼으로 사용자의 Github를 Chat GPT로 분석하여 결과를 제공하고 분석된 데이터를 다양한 조건으로 필터링하여 갤러리 형태로 제공하는 웹서비스."
+            stack={['React', 'TypeScript', 'Emotion', 'RTK-Query']}
+            link="https://github.com/DevProfiIe/Dev-Profile-Frontend"
           />
         </div>
       </div>
