@@ -15,7 +15,7 @@ type WorthyCardProps = {
 
 export default function WorthyCard({ title, description, stack, link }: WorthyCardProps) {
   return (
-    <Link href={link}>
+    <Link href={link} target="_blank">
       <div className="min-w-[300px] min-h-[300px] shadow-custom flex flex-col py-8 px-7 bg-lightNavy">
         <div className="flex justify-between items-center mb-[35px]">
           <Folder className="text-green w-[40px] h-[40px]" />
@@ -28,7 +28,7 @@ export default function WorthyCard({ title, description, stack, link }: WorthyCa
         <div>
           <ul className="flex gap-2">
             {stack.map((item, idx) => (
-              <P5 key={idx} className="text-slate font-mono">
+              <P5 key={idx} className="text-slate font-mono text-[11px]">
                 {item}
               </P5>
             ))}
