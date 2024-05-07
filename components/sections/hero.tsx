@@ -1,12 +1,30 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react'
 import H1 from '../typography/h1'
 import H5 from '../typography/h5'
 import P1 from '../typography/p1'
 import { Button } from '../ui/button'
 import Section from '../ui/section'
 
+const text = '프론트엔드 개발자 이성헌입니다.'.split('')
+
 export default function Hero() {
+  const textRef = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    let index = 0
+    const interval = setInterval(() => {
+      if (index === text.length) {
+        clearInterval(interval)
+        return
+      }
+      textRef.current!.textContent += text[index]
+      index++
+    }, 150)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <Section className="min-h-screen h-screen bg-navy px-20">
       <div className="max-w-[1000px] flex flex-col gap-6">
@@ -18,8 +36,10 @@ export default function Hero() {
         <div>
           <H1 className="text-heading">
             <span className="text-white">성장을 멈추지 않는</span>
-            <br />
+          </H1>
+          <H1 className="relative text-heading">
             <span className="text-slate">프론트엔드 개발자 이성헌입니다.</span>
+            <span className="absolute text-white left-0" ref={textRef}></span>
           </H1>
         </div>
         <div className="max-w-[540px]">
