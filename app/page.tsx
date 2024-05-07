@@ -1,3 +1,4 @@
+import Footer from '@components/common/footer'
 import AboutMe from '@components/sections/about-me'
 import Experience from '@components/sections/experience'
 import Hero from '@components/sections/hero'
@@ -12,6 +13,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <WorthyProjects />
+      <Footer />
     </main>
   )
 }
