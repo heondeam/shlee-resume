@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <Section>
+    <Section className="py-8">
       <footer>
         <P5 className="text-slate font-mono">
           Designed by Brittany Chiang & Built by seoungheon Lee
