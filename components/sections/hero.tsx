@@ -39,7 +39,7 @@ export default function Hero() {
           </H1>
           <H1 className="relative text-heading">
             <span className="text-slate">프론트엔드 개발자 이성헌입니다.</span>
-            <span className="absolute text-white left-0" ref={textRef}></span>
+            <span className="absolute text-white left-0 top-0" ref={textRef}></span>
           </H1>
         </div>
         <div className="max-w-[540px]">
