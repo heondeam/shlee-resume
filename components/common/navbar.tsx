@@ -8,6 +8,9 @@ import { useState } from 'react'
 import { Drawer, DrawerContent, DrawerTrigger } from '@components/ui/drawer'
 import P1 from '@components/typography/p1'
 
+import LogoIcon from '@svg/logo.svg'
+import HexIcon from '@svg/hex.svg'
+
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false)
   const { navLinks } = config
@@ -23,7 +26,14 @@ export default function Navbar() {
       }`}
     >
       <div>
-        <Link href="/">아이콘</Link>
+        <Link className="relative group" href={'/'}>
+          <div className="absolute top-0 left-0 z-[-1] transition-custom group-hover:translate-x-[-2px] group-hover:translate-y-[-2px]">
+            <HexIcon className="w-[42px] h-[42px]" />
+          </div>
+          <div className="relative z-[1] ">
+            <LogoIcon className="w-[42px] h-[42px] transition-custom group-hover:translate-x-[-5px] group-hover:translate-y-[-5px]" />
+          </div>
+        </Link>
       </div>
       <div className="hidden lg:block">
         <ul className="flex gap-6">
