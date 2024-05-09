@@ -42,7 +42,10 @@ export default function Card({ cnt, belong, title, description, stack, link, ima
         <div className="flex relative z-20 gap-4">
           {/* stack */}
           {stack.map((tech, idx) => (
-            <P5 key={idx} className="text-lightSlate whitespace-nowrap font-mono">
+            <P5
+              key={idx}
+              className="text-lightSlate whitespace-nowrap font-mono hover:text-green transition-custom"
+            >
               {tech}
             </P5>
           ))}
