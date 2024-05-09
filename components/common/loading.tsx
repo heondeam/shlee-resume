@@ -13,6 +13,7 @@ type LoadingProps = {
 
 const FRAME_DURATION = 1000 / 60 // 60fps frame duration ~16.66ms
 const getTime = typeof performance === 'function' ? performance.now : Date.now
+const DEVICE_PIXEL_RATIO = window.devicePixelRatio || 1
 
 let rafId: number
 
@@ -33,12 +34,16 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
     }
   }, [canvasWidth, canvasHeight, onAnimationEnd])
 
+  /**
+   * 캔버스 초기화 및 그리기 시작
+   * @param canvas
+   * @param ctx
+   */
   const drawCanvas = (canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
-    const devicePixelRatio = window.devicePixelRatio || 1
     const setCanvasSize = () => {
       canvas.width = canvasWidth
       canvas.height = canvasHeight
-      ctx.scale(devicePixelRatio, devicePixelRatio)
+      ctx.scale(DEVICE_PIXEL_RATIO, DEVICE_PIXEL_RATIO)
     }
 
     setCanvasSize()
@@ -46,21 +51,31 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
 
     // 육각형 그리기
     ctx.strokeStyle = '#64ffda'
-    ctx.lineWidth = 3
+    // DEVICE_PIXEL_RATIO에 비례해서 선 굵기를 설정합니다.
+    ctx.lineWidth = Math.min(canvasWidth, canvasHeight) / 2 ** 8
     ctx.lineCap = 'round'
 
     drawHexagon(
       ctx,
-      canvasWidth / 4,
-      canvasHeight / 4,
+      canvasWidth / (2 * DEVICE_PIXEL_RATIO),
+      canvasHeight / (2 * DEVICE_PIXEL_RATIO),
       Math.min(canvasWidth, canvasHeight) / 2 ** 5.5,
-      1.7,
+      5,
       () => {
-        drawText(ctx, 'H', canvasWidth / 4, canvasHeight / 4 + 2)
+        drawText(
+          ctx,
+          'H',
+          canvasWidth / (2 * DEVICE_PIXEL_RATIO),
+          canvasHeight / (2 * DEVICE_PIXEL_RATIO)
+        )
       }
     )
   }
 
+  /**
+   * 배경을 그리는 함수
+   * @param ctx
+   */
   const drawBackground = (ctx: CanvasRenderingContext2D) => {
     // 이전에 그려진 내용을 지웁니다.
     ctx.clearRect(0, 0, canvasWidth, canvasHeight)
@@ -70,6 +85,15 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
     ctx.fillRect(0, 0, canvasWidth, canvasHeight)
   }
 
+  /**
+   * 육각형을 그리는 함수
+   * @param ctx
+   * @param centerX
+   * @param centerY
+   * @param size
+   * @param drawingSpeed
+   * @param onDrawEnd
+   */
   const drawHexagon = (
     ctx: CanvasRenderingContext2D,
     centerX: number,
@@ -82,6 +106,7 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
     const points: Point[] = []
     // 시작 각도를 0으로 설정하여 가장 위 꼭지점부터 시작
     const startAngleRad = -Math.PI / 2
+
     for (let i = 0; i < 6; i++) {
       const angleRad = startAngleRad + (Math.PI / 3) * i
       const x = centerX + size * Math.cos(angleRad)
@@ -113,6 +138,14 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
     drawLinesSequentially(0)
   }
 
+  /**
+   * 선을 그리는 함수
+   * @param ctx
+   * @param startPoint
+   * @param endPoint
+   * @param drawingSpeed
+   * @param onAnimationEnd
+   */
   const drawLine = (
     ctx: CanvasRenderingContext2D,
     startPoint: Point,
@@ -177,8 +210,15 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
     animate()
   }
 
+  /**
+   * 텍스트를 그리는 함수
+   * @param ctx
+   * @param text
+   * @param x
+   * @param y
+   */
   const drawText = (ctx: CanvasRenderingContext2D, text: string, x: number, y: number) => {
-    const fontSize = Math.min(canvasWidth, canvasHeight) / 50 // Adjust the divisor to change the font size relative to canvas size
+    const fontSize = Math.min(canvasWidth, canvasHeight) / 35 // Adjust the divisor to change the font size relative to canvas size
     let opacity = 0 // 초기 투명도를 0으로 설정합니다.
 
     // fade-in 애니메이션 함수
@@ -191,9 +231,11 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
       ctx.globalAlpha = opacity // 투명도를 설정합니다.
       ctx.font = `${fontSize}px sans-serif` // 텍스트 크기 설정
       ctx.fillStyle = '#64ffda'
-      ctx.textAlign = 'center'
       ctx.textBaseline = 'middle'
-      ctx.fillText(text, x, y)
+      ctx.textAlign = 'center'
+      let { actualBoundingBoxAscent, actualBoundingBoxDescent } = ctx.measureText(text)
+
+      ctx.fillText(text, x, y + (actualBoundingBoxAscent - actualBoundingBoxDescent) / 2) // 텍스트를 그립니다.
 
       // opacity가 1보다 작을 때는 계속해서 애니메이션을 반복합니다.
       if (opacity < 1) {
