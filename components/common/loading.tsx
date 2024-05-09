@@ -13,7 +13,7 @@ type LoadingProps = {
 
 const FRAME_DURATION = 1000 / 60 // 60fps frame duration ~16.66ms
 const getTime = typeof performance === 'function' ? performance.now : Date.now
-const DEVICE_PIXEL_RATIO = window.devicePixelRatio || 1
+const DEVICE_PIXEL_RATIO = typeof window === 'object' ? window.devicePixelRatio : 1
 
 let rafId: number
 
