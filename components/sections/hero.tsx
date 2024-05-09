@@ -48,11 +48,9 @@ export default function Hero() {
             일이든 포기하지 않고 끝까지 해내는 끈기와 책임감이 제 장점입니다. &#58;&#41;
           </P1>
         </div>
-        <div>
-          <Button className="mt-4" variant="career" size="lg">
-            Check out my resume!
-          </Button>
-        </div>
+        <button className="h-11 rounded-[4px] px-8 py-6 border border-green text-green font-mono bg-navy flex items-center justify-center relative z-[999] mt-4 w-fit hover:translate-x-[-4px] hover:translate-y-[-4px] transition-custom before:absolute before:transition-custom before:inline-block before:w-full before:h-full before:bg-green before:z-20 before:top-0 before:left-0 before:rounded-[4px] hover:before:translate-x-[8px] hover:before:translate-y-[8px]">
+          Check out my resume!
+        </button>
       </div>
     </Section>
   )
