@@ -183,7 +183,7 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
 
     // fade-in 애니메이션 함수
     const fadeIn = () => {
-      opacity += 0.05 // 프레임마다 opacity를 증가시켜 나타나도록 합니다.
+      opacity += 0.01 // 프레임마다 opacity를 증가시켜 나타나도록 합니다.
       if (opacity >= 1) {
         opacity = 1 // 투명도가 1 이상이 되면 최대 투명도로 설정합니다.
       }
