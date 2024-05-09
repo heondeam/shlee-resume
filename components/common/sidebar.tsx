@@ -41,10 +41,10 @@ export default function Sidebar({ direction }: SidebarProps) {
   const renderText = (text: string) => {
     return (
       <P5
+        className="font-mono tracking-wider cursor-default hover:text-green transition-custom"
         style={{
           writingMode: 'vertical-rl'
         }}
-        className="font-mono tracking-wider"
       >
         {text}
       </P5>
