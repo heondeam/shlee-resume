@@ -22,7 +22,7 @@ const TEXTS = [
   <>
     업무를 하며 전산학 기초지식 공부의 중요성 및 필요성을 느끼고,{' '}
     <Link
-      className="text-green hover:underline"
+      className="text-green hover:underline hover:underline-offset-2"
       href={'https://jungle.krafton.com/main'}
       target="_blank"
     >
@@ -34,7 +34,7 @@ const TEXTS = [
   <>
     체계적으로 정리 하는 것을 좋아하기 때문에,{' '}
     <Link
-      className="text-green hover:underline"
+      className="text-green hover:underline hover:underline-offset-2"
       href={'https://heondeam.notion.site/Steady-Study-853240f5fe874921ab8aa6822fc67652?pvs=4'}
       target="_blank"
     >
