@@ -1,27 +1,36 @@
 'use client'
 
-import P1 from '@components/typography/p1'
-import P5 from '@components/typography/p5'
-import Github from '@svg/github.svg'
-import { config } from '@utils/config'
 import Link from 'next/link'
+import P5 from '@components/typography/p5'
+import { SidebarLeftLink, config } from '@utils/config'
+
+import Github from '@svg/github.svg'
+import Blog from '@svg/blog.svg'
+import Notion from '@svg/notion.svg'
 
 type SidebarProps = {
   direction: 'left' | 'right'
 }
 
 export default function Sidebar({ direction }: SidebarProps) {
-  const { left, right } = config.sidebarLinks
+  const { left, right } = config.sidebarLinks as { left: SidebarLeftLink[]; right: any }
 
   const iconMap: { [key: string]: JSX.Element } = {
-    github: <Github className="w-[20px] h-[20px]" />
+    github: <Github className="w-[20px] h-[20px]" />,
+    blog: <Blog className="w-[20px] h-[20px]" />,
+    notion: <Notion className="w-[20px] h-[20px]" />
   }
 
-  const renderLinks = (links: any[]) => {
+  const renderLinks = (links: SidebarLeftLink[]) => {
     return links.map((link, i) => {
       if (link.type === 'link') {
         return (
-          <Link key={i} href={'/'}>
+          <Link
+            className="hover:text-green transition-custom"
+            key={i}
+            href={link.url}
+            target="_blank"
+          >
             {iconMap[link.icon]}
           </Link>
         )
