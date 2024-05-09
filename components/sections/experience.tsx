@@ -41,7 +41,7 @@ export default function Experience() {
                   </>,
                   <>
                     zod와 react-hook-form을 활용하여 런타임에 타입 체킹을 수행하였고 Form
-                    Validation을 기능을 구현하는 데에 DX 향상에 기여하였습니다.
+                    Validation과 관련한 코드를 효율적으로 구현하여 DX 향상에 기여하였습니다.
                   </>
                 ]}
                 cols={1}
@@ -60,6 +60,10 @@ export default function Experience() {
               <UnorderList
                 items={[
                   <>
+                    기존 jQuery로 구성된 레거시 코드를 Angular2로 마이그레이션하는 작업을 총괄하여
+                    수행하였습니다.
+                  </>,
+                  <>
                     Angular2를 활용하여 통합로그관리 솔루션인 Logsaver와 업무용 시스템 이상 징후
                     탐지/자료 영상 확보 솔루션인 B2SAVER의 신규 기능들을 개발하고 유지보수
                     하였습니다.
@@ -71,10 +75,6 @@ export default function Experience() {
                   <>
                     PHP CodeIgniter 프레임워크를 활용하여 일부 API 개발 및 DB 구조 변경에 대응하는
                     등의 백엔드 업무 또한 마다하지 않고 수행하였습니다.
-                  </>,
-                  <>
-                    기존 jQuery로 구성된 레거시 코드를 Angular2로 마이그레이션하는 작업을 총괄하여
-                    수행하였습니다.
                   </>
                 ]}
                 cols={1}
