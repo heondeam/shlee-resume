@@ -29,7 +29,7 @@ const PROJECT_LIST = [
     link: (
       <>
         <Link
-          className="w-[20px] h-[20px] text-white"
+          className="w-[20px] h-[20px] text-white hover:text-green transition-custom"
           href={'https://www.ttokttok365.com'}
           target="_blank"
         >
@@ -53,7 +53,7 @@ const PROJECT_LIST = [
     link: (
       <>
         <Link
-          className="w-[20px] h-[20px] text-white"
+          className="w-[20px] h-[20px] text-white hover:text-green transition-custom"
           href={'https://www.knowhowzip.com'}
           target="_blank"
         >
@@ -67,11 +67,11 @@ const PROJECT_LIST = [
     belong: '@ 디에스앤텍',
     title: 'Logsaver',
     description: [
-      '홈 클리닝 서비스 애플리케이션',
-      '',
-      '유저 앱 내 서비스 신청, 신청 내역 확인 및 수정 등 주요 기능 개발',
-      '백오피스 유저 관리, 클리닝 서비스 관리 기능, 파일 업로드 및 다운로드 기능 개발',
-      'RN 웹뷰 환경 및 브릿지 통신을 통한 모바일앱 구축'
+      '대량으로 수집되는 로그데이터에 대해 정책 기반의 실시간 모니터링 및 이상징후 검출, 고속검색, 데이터간 상관분석을 제공하는 대용량 로그 데이터 분석 시스템으로 여러 기업의 온프레미스 환경에서 사용되는 웹 솔루션.',
+      'jQuery로 이루어진 레거시 코드를 Angular2로 리팩토링 및 유지보수하여 고객사들의 만족도를 높임.',
+      '고객사 별로 다른 크기와 구조를 가진 로그 데이터들을 정형화된 데이터로 가공한 뒤 Google Chart API를 사용하여 일관된 분석 차트로 시각화.',
+      '조건식을 통한 데이터 필터링 및 검색, 검색 결과 창 조인 기능, 엑셀 다운로드 기능 등 다양한 기능을 구현.',
+      '기존 온프레미스 환경에서 사용되던 로그 데이터 분석 시스템을 클라우드 환경으로 이전하는 작업을 수행하여 고객사들의 편의성을 높임.'
     ],
     stack: ['Angular2', 'Bootstrap', 'jQuery', 'RxJS'],
     link: <></>,
@@ -81,11 +81,9 @@ const PROJECT_LIST = [
     belong: '@ 디에스앤텍',
     title: 'B2SAVER',
     description: [
-      '홈 클리닝 서비스 애플리케이션',
-      '',
-      '유저 앱 내 서비스 신청, 신청 내역 확인 및 수정 등 주요 기능 개발',
-      '백오피스 유저 관리, 클리닝 서비스 관리 기능, 파일 업로드 및 다운로드 기능 개발',
-      'RN 웹뷰 환경 및 브릿지 통신을 통한 모바일앱 구축'
+      '단말 환경에서 일어나는 모든 행위 실시간 모니터링 및 저장을 통한 보안사고 사전 예방, 사후 증거 확보를 위한 Compliance 시스템.',
+      'jQuery로 이루어진 레거시 코드를 Angular2로 리팩토링 및 유지보수하여 고객사들의 만족도를 높임.',
+      '연속적으로 기록된 화면 이미지를 재생할 수 있는 자체적인 동영상 플레이어 구현하여 PC CCTV와 유사한 기능 제공.'
     ],
     stack: ['Angular2', 'Bootstrap', 'jQuery', 'RxJS'],
     link: <></>,
@@ -95,17 +93,17 @@ const PROJECT_LIST = [
     belong: '@ 더빌드소프트',
     title: '공새로',
     description: [
-      '홈 클리닝 서비스 애플리케이션',
-      '',
-      '유저 앱 내 서비스 신청, 신청 내역 확인 및 수정 등 주요 기능 개발',
-      '백오피스 유저 관리, 클리닝 서비스 관리 기능, 파일 업로드 및 다운로드 기능 개발',
-      'RN 웹뷰 환경 및 브릿지 통신을 통한 모바일앱 구축'
+      '기존에 불투명하고 비효율적인 건자재 조달과정을 디지털로 전환한 건설현장 맞춤형 자재 조달 B2B SaaS 플랫폼',
+      '랜딩, 고객사, 공급사, 백오피스 페이지로 구성된 프로잭트의 프론트엔드를 디렉토리 구조 및 설계부터 인터페이스 개발까지 전반적인 업무를 담당하였음.',
+      '모든 페이지에 반응형 웹 디자인을 적용하여 모바일 환경에서도 사용이 가능하도록 구현하였음.',
+      '서비스 신청부터 결제까지의 흐름을 구현하고, 자재 검색과 추천 장바구니 기능을 구현하였음.',
+      '서비스 전반에 걸쳐 사용되는 관심사는 Redux를 사용하여 상태관리를 하고, 일부분은 Context API를 사용하여 의존성을 주입하였음.'
     ],
     stack: ['React', 'styled-components', 'Redux'],
     link: (
       <>
         <Link
-          className="w-[20px] h-[20px] text-white"
+          className="w-[20px] h-[20px] text-white hover:text-green"
           href={'https://www.gongsaero.com/'}
           target="_blank"
         >
