@@ -26,7 +26,7 @@ export default function Card({ cnt, belong, title, description, stack, link, ima
     const aligned = isRightAligned ? 'lg:items-end' : 'lg:items-start'
 
     return (
-      <div className={`lg:flex lg:flex-col lg:gap-4 ${aligned}`}>
+      <div className={`w-full flex flex-col gap-4 ${aligned}`}>
         <H5 className="text-green">{belong}</H5>
         <H2 className="text-white">{title}</H2>
         <div
@@ -42,10 +42,7 @@ export default function Card({ cnt, belong, title, description, stack, link, ima
         <div className="flex relative z-20 gap-4">
           {/* stack */}
           {stack.map((tech, idx) => (
-            <P5
-              key={idx}
-              className="text-lightSlate whitespace-nowrap font-mono hover:text-green transition-custom"
-            >
+            <P5 key={idx} className="text-lightSlate  font-mono hover:text-green transition-custom">
               {tech}
             </P5>
           ))}
@@ -72,16 +69,16 @@ export default function Card({ cnt, belong, title, description, stack, link, ima
   })()
 
   return (
-    <div className="relative flex flex-col items-center lg:grid lg:grid-cols-12 lg:items-center">
+    <div className="relative items-center grid grid-cols-12 lg:items-center">
       <div
-        className={`relative z-20 row-start-1 ${contentCols} flex flex-col gap-6 items-${
+        className={`w-full relative z-20 row-start-1 ${contentCols} flex flex-col gap-6 items-${
           isRightAligned ? 'end' : 'start'
         }`}
       >
         {/* content */}
         {renderContent(isRightAligned, description, stack, link)}
       </div>
-      <div className={`group row-start-1 shadow-custom ${imageCols}`}>
+      <div className={`w-full group row-start-1 shadow-custom ${imageCols}`}>
         <ImageCard image={image} />
       </div>
     </div>

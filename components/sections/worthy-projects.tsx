@@ -7,7 +7,7 @@ import WorthyCard from '@components/project/worthy-card'
 
 export default function WorthyProjects() {
   return (
-    <Section id="worthy-projects" className="h-auto bg-navy px-20 py-48">
+    <Section id="worthy-projects" className="h-auto bg-navy px-8 py-36">
       <div className="max-w-[950px]">
         <div className="flex flex-col items-center gap-4">
           <H2 className="text-white whitespace-nowrap">Other Noteworthy Projects</H2>
