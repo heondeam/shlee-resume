@@ -51,7 +51,6 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
 
     // 육각형 그리기
     ctx.strokeStyle = '#64ffda'
-    // DEVICE_PIXEL_RATIO에 비례해서 선 굵기를 설정합니다.
     ctx.lineWidth = Math.min(canvasWidth, canvasHeight) / 2 ** 8
     ctx.lineCap = 'round'
 
@@ -60,7 +59,8 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
       canvasWidth / (2 * DEVICE_PIXEL_RATIO),
       canvasHeight / (2 * DEVICE_PIXEL_RATIO),
       Math.min(canvasWidth, canvasHeight) / 2 ** 5.5,
-      5,
+      // 현재 캔버스 크기에 따라 그리는 속도를 조절합니다.
+      Math.min(canvasWidth, canvasHeight) / 2 ** 9,
       () => {
         drawText(
           ctx,
