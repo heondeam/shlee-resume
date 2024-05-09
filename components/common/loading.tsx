@@ -218,7 +218,7 @@ export default function Loading({ canvasWidth, canvasHeight, onAnimationEnd }: L
    * @param y
    */
   const drawText = (ctx: CanvasRenderingContext2D, text: string, x: number, y: number) => {
-    const fontSize = Math.min(canvasWidth, canvasHeight) / 35 // Adjust the divisor to change the font size relative to canvas size
+    const fontSize = Math.min(canvasWidth, canvasHeight) / 40 // Adjust the divisor to change the font size relative to canvas size
     let opacity = 0 // 초기 투명도를 0으로 설정합니다.
 
     // fade-in 애니메이션 함수
