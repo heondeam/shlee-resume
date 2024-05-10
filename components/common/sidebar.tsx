@@ -53,8 +53,8 @@ export default function Sidebar({ direction }: SidebarProps) {
 
   return (
     <div
-      className={`fixed w-[40px] bottom-0 hidden sm:flex flex-col justify-center 
-  ${direction === 'left' ? 'left-[20px] lg:left-[40px]' : 'right-[20px] lg:right-[40px]'}
+      className={`fixed w-[40px] bottom-0 hidden md:flex md:flex-col justify-center 
+  ${direction === 'left' ? 'md:left-[15px]' : 'md:right-[15px]'}
   z-10 text-lightSlate flex flex-col items-center gap-8`}
     >
       {direction === 'left' ? renderLinks(left) : right.map((link) => renderText(link.text))}

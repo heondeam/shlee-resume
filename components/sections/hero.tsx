@@ -26,7 +26,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <Section className="h-screen bg-navy px-8">
+    <Section className="h-screen bg-navy px-12">
       <div className="max-w-[1000px] flex flex-col gap-6">
         <div>
           <H5 className="text-small-heading font-sans font-normal">

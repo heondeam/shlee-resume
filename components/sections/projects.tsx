@@ -16,7 +16,7 @@ import b2saver from '@png/b2saver.png'
 
 const PROJECT_LIST = [
   {
-    belong: '@ 팀 스파르타',
+    belong: '@ 팀스파르타',
     title: '똑똑 365',
     description: [
       '홈 클리닝 서비스 애플리케이션',
@@ -39,7 +39,7 @@ const PROJECT_LIST = [
     image: ddockddock
   },
   {
-    belong: '@ 팀 스파르타',
+    belong: '@ 팀스파르타',
     title: 'knowhow.zip',
     description: [
       '전자책 구독 B2C SaaS 플랫폼으로 Google Docs로 작성한 문서를 전자책 형태로 변환하여 제공하는 서비스.',
@@ -115,7 +115,7 @@ const PROJECT_LIST = [
 
 export default function Projects() {
   return (
-    <Section id="projects" className="bg-navy py-36 px-8">
+    <Section id="projects" className="bg-navy py-36 px-12">
       <div className="w-full lg:max-w-[950px] flex flex-col gap-12">
         <Title idx="03" title="Project" />
 
