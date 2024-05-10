@@ -17,7 +17,7 @@ export default function WorthyProjects() {
         <div className="grid grid-cols-1 lg:grid-cols-3 mt-28 gap-[15px]">
           <WorthyCard
             title="포트폴리오 사이트"
-            description="포트폴리오 용도로 제작한 사이트로 Next.js를 사용하여 제작하였으며, shadcn/ui 라이브러리를 사용하여 디자인을 구성하였습니다. useCanvas 훅을 사용하여 캔버스를 사용한 애니메이션을 구현하였습니다."
+            description="포트폴리오 용도로 제작한 사이트로 Next.js를 사용하여 제작하였으며, shadcn/ui 라이브러리를 사용하여 디자인을 구성하였습니다. useCanvas 훅을 사용하여 캔버스를 사용한 애니메이션을 직접 구현하였습니다."
             stack={['Next.js', 'shadcn/ui', 'canvas']}
             link="https://github.com/heondeam/shlee-resume"
           />

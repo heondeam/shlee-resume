@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed h-[100px] w-full top-0 left-0 z-50 flex justify-between items-center px-[50px] backdrop-blur-sm transition-custom ${
+      className={`fixed h-[100px] w-full top-0 left-0 z-50 flex justify-between items-center px-8 md:px-[50px] backdrop-blur-sm transition-custom ${
         mobileMenu ? 'backdrop-blur-none bg-transparent' : 'bg-navbar'
       }`}
     >
