@@ -74,7 +74,7 @@ export default function Card({ cnt, belong, title, description, stack, link, ima
   })()
 
   return (
-    <div className="relative items-center grid grid-cols-12 md:items-center">
+    <div className="relative shadow-custom md:shadow-none items-center grid grid-cols-12 md:items-center">
       <div
         className={`w-full h-full md:h-auto relative z-20 px-[20px] py-[20px] md:p-0 row-start-1 ${contentCols} flex flex-col gap-6 justify-center items-${
           isRightAligned ? 'end' : 'start'

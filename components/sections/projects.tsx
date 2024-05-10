@@ -119,18 +119,20 @@ export default function Projects() {
       <div className="w-full lg:max-w-[950px] flex flex-col gap-12">
         <Title idx="03" title="Project" />
 
-        {PROJECT_LIST.map((project, idx) => (
-          <Card
-            key={idx}
-            cnt={idx}
-            belong={project.belong}
-            title={project.title}
-            description={project.description}
-            stack={project.stack}
-            link={project.link}
-            image={project.image}
-          />
-        ))}
+        <div className="flex flex-col gap-12">
+          {PROJECT_LIST.map((project, idx) => (
+            <Card
+              key={idx}
+              cnt={idx}
+              belong={project.belong}
+              title={project.title}
+              description={project.description}
+              stack={project.stack}
+              link={project.link}
+              image={project.image}
+            />
+          ))}
+        </div>
       </div>
     </Section>
   )
