@@ -33,7 +33,7 @@ export default function Footer() {
             )
           })}
         </div>
-        <P5 className="text-slate font-mono hover:text-green transition-custom">
+        <P5 className="text-slate text-center font-mono hover:text-green transition-custom">
           Designed by Brittany Chiang & Built by seoungheon Lee
         </P5>
       </footer>
