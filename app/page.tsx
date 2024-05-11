@@ -38,7 +38,6 @@ export default function Home() {
     <>
       <Navbar />
       <Sidebar direction="left" />
-      <Sidebar direction="right" />
       <main>
         <Hero />
         <AboutMe />
@@ -47,6 +46,7 @@ export default function Home() {
         <WorthyProjects />
         <Footer />
       </main>
+      <Sidebar direction="right" />
     </>
   )
 }

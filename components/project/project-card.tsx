@@ -30,7 +30,7 @@ export default function Card({ cnt, belong, title, description, stack, link, ima
         <H5 className="text-green">{belong}</H5>
         <div className="flex items-center gap-4">
           <H2 className="text-white">{title}</H2>
-          <div className="flex gap-4">{link}</div>
+          {link && <div className="flex gap-4">{link}</div>}
         </div>
         <div
           className={`md:shadow-custom transition-custom md:p-[25px] rounded-md text-lightSlate bg-transparent md:bg-lightNavy flex flex-col md:items-${

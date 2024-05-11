@@ -119,6 +119,12 @@ const config = {
       transitionTimingFunction: {
         open: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
         close: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)'
+      },
+      gridTemplateColumns: {
+        'custom-columns': 'repeat(3, 300px)'
+      },
+      gridAutoRows: {
+        'custom-rows': 'repeat(3, minmax(300px, auto))'
       }
     }
   },

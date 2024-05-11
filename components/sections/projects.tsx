@@ -72,7 +72,6 @@ const PROJECT_LIST = [
       '기존 온프레미스 환경에서 사용되던 로그 데이터 분석 시스템을 클라우드 환경으로 이전하는 작업을 수행하여 고객사들의 편의성을 높임.'
     ],
     stack: ['Angular2', 'Bootstrap', 'jQuery', 'RxJS'],
-    link: <></>,
     image: logsaver
   },
   {
@@ -84,7 +83,6 @@ const PROJECT_LIST = [
       '연속적으로 기록된 화면 이미지를 재생할 수 있는 자체적인 동영상 플레이어 구현하여 PC CCTV와 유사한 기능 제공.'
     ],
     stack: ['Angular2', 'Bootstrap', 'jQuery', 'RxJS'],
-    link: <></>,
     image: b2saver
   },
   {
