@@ -10,7 +10,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'shlee-portfolio',
   description: '이성헌의 포트폴리오 사이트입니다.',
-  icons: ['/assets/svg/logo.svg']
+  icons: {
+    icon: '/logo.svg'
+  }
 }
 
 export default function RootLayout({
@@ -24,7 +26,7 @@ export default function RootLayout({
         <title>{metadata.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/assets/svg/logo.svg" sizes="any" />
+        <link rel="icon" type="image/x-icon" href="./logo.svg"></link>
       </Head>
       <body className={inter.className}>{children}</body>
     </html>
