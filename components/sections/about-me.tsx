@@ -58,7 +58,7 @@ const SKILLS = [
 export default function AboutMe() {
   return (
     <Section id="about" className="bg-navy px-8 py-48">
-      <div className="max-w-[900px] flex flex-col gap-6">
+      <div className="max-w-[900px] flex flex-col gap-10">
         <Title title="About Me" idx="01" />
         <div className="flex flex-col gap-8 md:flex-row justify-between">
           <div className="flex flex-col gap-4 md:w-[calc(100%-350px)]">

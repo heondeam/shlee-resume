@@ -10,7 +10,7 @@ import H5 from '@components/typography/h5'
 export default function Experience() {
   return (
     <Section id="experience" className="bg-navy px-8 py-48">
-      <div className="w-full md:max-w-[750px] flex flex-col gap-8 justify-center">
+      <div className="w-full md:max-w-[750px] flex flex-col gap-10 justify-center">
         <Title title="Work Experience" idx="02" />
         <Tabs
           className="w-full block space-y-6 md:space-y-0 md:flex md:flex-row md:gap-6"

@@ -19,10 +19,8 @@ const PROJECT_LIST = [
     belong: '@ 팀스파르타',
     title: '똑똑 365',
     description: [
-      '홈 클리닝 서비스 애플리케이션',
-      '',
-      '유저 앱 내 서비스 신청, 신청 내역 확인 및 수정 등 주요 기능 개발',
-      '백오피스 유저 관리, 클리닝 서비스 관리 기능, 파일 업로드 및 다운로드 기능 개발'
+      '홈 클리닝 서비스 애플리케이션으로 현제 애플 앱스토어와 구글 플레이 스토어에 서비스 중.',
+      ''
     ],
     stack: ['Next.js', 'React Navite', 'TailwindCSS', 'shadcn/ui', 'Zustand', 'SWR'],
     link: (
@@ -114,7 +112,7 @@ const PROJECT_LIST = [
 export default function Projects() {
   return (
     <Section id="projects" className="bg-navy py-36 px-8">
-      <div className="w-full lg:max-w-[950px] flex flex-col gap-6">
+      <div className="w-full lg:max-w-[950px] flex flex-col gap-10">
         <Title idx="03" title="Project" />
 
         <div className="flex flex-col gap-12">
