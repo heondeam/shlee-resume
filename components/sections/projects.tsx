@@ -114,7 +114,7 @@ const PROJECT_LIST = [
 export default function Projects() {
   return (
     <Section id="projects" className="bg-navy py-36 px-8">
-      <div className="w-full lg:max-w-[950px] flex flex-col gap-12">
+      <div className="w-full lg:max-w-[950px] flex flex-col gap-6">
         <Title idx="03" title="Project" />
 
         <div className="flex flex-col gap-12">
