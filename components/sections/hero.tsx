@@ -49,7 +49,7 @@ export default function Hero() {
             일이든 포기하지 않고 끝까지 해내는 끈기와 책임감이 제 장점입니다. &#58;&#41;
           </P1>
         </div>
-        <Link href="./static/resume.pdf" target="_blank" rel="noopener noreferrer">
+        <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
           <Button className="mt-4 w-fit" variant={'career'} size={'lg'}>
             Check my resume!
           </Button>

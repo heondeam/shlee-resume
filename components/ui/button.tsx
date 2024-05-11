@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/utils/utils'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 font-mono',
+  'flex items-center justify-center whitespace-nowrap rounded-md text-sm disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
@@ -15,13 +15,17 @@ const buttonVariants = cva(
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
-        career: 'border border-green text-green hover:bg-green/90 text-green '
+        career: 'border border-green text-green text-green font-mono bg-navy'
       },
       size: {
         default: 'h-10 px-4 py-2',
         sm: 'h-9 rounded-md px-3',
         lg: 'h-11 rounded-[4px] px-8 py-6',
         icon: 'h-10 w-10'
+      },
+      anime: {
+        motion:
+          'before:transition-custom before:absolute before:w-full before:h-full before:bg-green before:z-20 before:top-0 before:left-0 before:rounded-[4px] before:hover:translate-x-[4px] before:hover:translate-y-[4px]'
       }
     },
     defaultVariants: {
@@ -38,10 +42,14 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, anime, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button'
     return (
-      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+      <Comp
+        className={cn(buttonVariants({ variant, size, anime, className }))}
+        ref={ref}
+        {...props}
+      />
     )
   }
 )
