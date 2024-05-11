@@ -6,6 +6,7 @@ import H5 from '../typography/h5'
 import P1 from '../typography/p1'
 import { Button } from '../ui/button'
 import Section from '../ui/section'
+import Link from 'next/link'
 
 const text = '프론트엔드 개발자 이성헌입니다.'.split('')
 
@@ -48,9 +49,11 @@ export default function Hero() {
             일이든 포기하지 않고 끝까지 해내는 끈기와 책임감이 제 장점입니다. &#58;&#41;
           </P1>
         </div>
-        <Button className="mt-4 w-fit" variant={'career'} size={'lg'}>
-          Check my resume!
-        </Button>
+        <Link href="./static/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <Button className="mt-4 w-fit" variant={'career'} size={'lg'}>
+            Check my resume!
+          </Button>
+        </Link>
       </div>
     </Section>
   )

@@ -33,6 +33,18 @@ export default function WorthyProjects() {
             stack={['React', 'TypeScript', 'Emotion', 'RTK-Query']}
             link="https://github.com/DevProfiIe/Dev-Profile-Frontend"
           />
+          <WorthyCard
+            title="Pintos Project"
+            description="정글 과정 내에서 Pintos 운영체제를 직접 구현해보는 프로젝트로, 4개의 프로젝트로 구성되어 있습니다. 특히 가상 메모리 관리와 cpu 스케줄링을 직접 구현해보면서 운영체제에 대한 이해를 높일 수 있었습니다."
+            stack={['C', 'Perl', 'QEMU', 'GDB']}
+            link="https://github.com/YoonpyoHong/PintOS-Blue07"
+          />
+          <WorthyCard
+            title="Red-Black Tree"
+            description="자료구조 수업에서 배운 Red Black Tree를 직접 구현해보는 프로젝트로, C로 구현하였습니다. Red Black Tree의 특성을 이해하고 구현하면서 자료구조에 대한 이해를 높일 수 있었습니다."
+            stack={['C']}
+            link="https://github.com/heondeam/rbtree-lab"
+          />
         </div>
       </div>
     </Section>
