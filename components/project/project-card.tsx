@@ -33,9 +33,8 @@ export default function Card({ cnt, belong, title, description, stack, link, ima
           {link && <div className="flex gap-4">{link}</div>}
         </div>
         <div
-          className={`md:shadow-custom transition-custom md:p-[25px] rounded-md text-lightSlate bg-transparent md:bg-lightNavy flex flex-col md:items-${
-            isRightAligned ? 'end' : 'start'
-          } gap-4`}
+          className={`md:shadow-custom transition-custom md:p-[25px] rounded-md text-lightSlate bg-transparent md:bg-lightNavy flex flex-col ${aligned}
+           gap-4`}
         >
           {/* feature card */}
           {description.map((desc, idx) => (
