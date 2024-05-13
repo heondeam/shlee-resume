@@ -60,13 +60,13 @@ export default function Experience() {
               <UnorderList
                 items={[
                   <>
-                    기존 jQuery로 구성된 레거시 코드를 Angular2로 마이그레이션하는 작업을 총괄하여
-                    수행하였습니다.
-                  </>,
-                  <>
                     Angular2를 활용하여 통합로그관리 솔루션인 Logsaver와 업무용 시스템 이상 징후
                     탐지/자료 영상 확보 솔루션인 B2SAVER의 신규 기능들을 개발하고 유지보수
                     하였습니다.
+                  </>,
+                  <>
+                    기존 jQuery로 구성된 레거시 코드를 Angular2로 마이그레이션하는 작업을 총괄하여
+                    수행하였습니다.
                   </>,
                   <>
                     온프레미스 환경에서의 서비스를 클라우드로 이전하는 프로젝트에 참여하여, AWS EC2
